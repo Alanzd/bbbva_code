@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+        
+        html, body{
+            height: 100%;
+        }
+        
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        body {
+            background-color: #d3eff1;
+            display: grid;
+            place-items: center;
+        }
+        
+        p{
+            font-size: 24px;
+        }
+        .weekday{
+          font-size: 16px;
+        }
+        
+        .card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            color: #505050;
+            font-family: 'Raleway', serif;
+        }
+        
+        #heading{
+            font-size: 50px;    
+            color: #1c2036;
+        }
+
+        #weatherWeek .col {
+          padding-inline: 0px;
+        }
+        
+        .weather{
+            place-items: center;
+        }
+        
+        .weather-details > p >span{
+            color: #797979;
+            font-size: 20px;
+        }
+        
+        .fa{
+            color: #a5a5b1
+        }
+        
+         *:focus{
+            outline: none;
+        }
