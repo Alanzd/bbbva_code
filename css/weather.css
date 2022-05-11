@@ -54,3 +54,16 @@
          *:focus{
             outline: none;
         }
+
+        p.footerNotice {
+          font: 300 15px/18px Raleway;
+          margin-top: 15px;
+          margin-bottom: 0;
+          color: rgb(241, 119, 26);
+          opacity: 1;
+        }
+        
+        p.footerNotice:empty {
+          display: none;
+        }
+        
