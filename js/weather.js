@@ -2,7 +2,8 @@ $(document).ready(function() {
   var currentDate =  new Date().toLocaleDateString();
   $('#date').html(currentDate); 
 
-  var cities = ["Vitoria","Albacete","Alicante","Almeria","Avila","Badajoz","Palma","Barcelona","Burgos","Cáceres","Cádiz","Castellón de la Plana","Ciudad Real","Córdoba","Coruña, A","Cuenca","Girona","Granada","Guadalajara","Donostia-San Sebastián","Huelva","Huesca","Jaén","León","Lleida","Logroño","Lugo","Madrid","Málaga","Murcia","Pamplona","Ourense","Oviedo","Palencia","Las Palmas de Gran Canaria","Pontevedra","Salamanca","Santa Cruz de Tenerife","Santander","Segovia","Sevilla","Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Bilbao","Zamora","Zaragoza","Ceuta","Melilla"];
+  var cities = ["Albacete","Alicante","Almeria","Avila","Badajoz","Palma","Barcelona","Burgos","Cáceres","Cádiz","Castellón de la Plana","Ciudad Real","Córdoba","Coruña, A","Cuenca","Girona","Granada","Guadalajara","Donostia-San Sebastián","Huelva","Huesca","Jaén","León","Lleida","Logroño","Lugo","Madrid","Málaga","Murcia","Pamplona","Ourense","Oviedo","Palencia","Las Palmas de Gran Canaria","Pontevedra","Salamanca","Santa Cruz de Tenerife","Santander","Segovia","Sevilla","Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Bilbao","Zamora","Zaragoza","Ceuta","Melilla", "Vitoria"];
+  cities.sort();
 
   $('#cities')
   .click(function (e) { 
@@ -61,8 +62,9 @@ $(document).ready(function() {
       $('#currentMin').html(Math.round(daily_data[0].temp.min) + '&#8451');
       var sunrise_hour = new Date(data.current.sunrise * 1000).getHours(); 
       var sunrise_minutes = new Date(data.current.sunrise * 1000).getMinutes();
+      var sunset_minutes = new Date(data.current.sunset * 1000).getMinutes();
       var sunrise = (sunrise_hour < 10 ? "0" + sunrise_hour : sunrise_hour) + ':' + (sunrise_minutes < 10 ? "0" + sunrise_minutes : sunrise_minutes);
-      var sunset = new Date(data.current.sunset * 1000).getHours() + ':' + new Date(data.current.sunset * 1000).getMinutes();
+      var sunset = new Date(data.current.sunset * 1000).getHours() + ':' + (sunset_minutes < 10 ? "0" + sunset_minutes : sunset_minutes);
       $('#currentSunrise').html(sunrise);
       $('#currentSunset').html(sunset);
       $('#currentWind').html(data.current.wind_speed + 'km/h');
