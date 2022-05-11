@@ -16,6 +16,7 @@ $(document).ready(function() {
   .change(function (e) { 
     e.preventDefault();
     getCoordinates($('#cities').val());
+    
 
   });
 });
