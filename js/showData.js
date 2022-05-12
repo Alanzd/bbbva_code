@@ -1,3 +1,4 @@
+// Draw widget using weather API data
 
   function showData(data) {
     if (data!= null && data) {

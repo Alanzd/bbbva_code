@@ -1,6 +1,5 @@
 
-/* This function gets latitude and longitude from a city name, if success it calls 
-weatherApp.js */
+/* This function gets latitude and longitude from a city name */
 
 async function getCoordinates(city) {
 

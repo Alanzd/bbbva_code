@@ -1,3 +1,5 @@
+// display cities select
+
 function initializeSelectMenu($arraySelectMenu) {
   for (i = 0; i < $arraySelectMenu.length; i++) {
       $($arraySelectMenu[i]).selectmenu({

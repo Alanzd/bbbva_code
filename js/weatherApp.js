@@ -1,3 +1,4 @@
+// API weather, request data from latitude and longitude
 
   async function weatherApp(latitude, longitude) {
 
