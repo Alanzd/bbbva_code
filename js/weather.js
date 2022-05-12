@@ -15,8 +15,11 @@ $(document).ready(function() {
   })
   .change(function (e) { 
     e.preventDefault();
-    getCoordinates($('#cities').val());
-    
+    getCoordinates($('#cities').val())
+      .then(function(coordinates){
+        this.weatherApp(coordinates.lat, coordinates.lon);
+        $('#city').html(city);
+      });
 
   });
 });
