@@ -7,9 +7,11 @@ async function getCity(latitude, longitude) {
   .then(function (response) {
     var city = response.data[0].name;
     $('#city').html(city);
+    return city;
   })
   .catch(function (error) {
     $('.footerNotice').removeClass('d-none').html("Request failed: " + error);
+    return false;
   })
 }
 
