@@ -18,7 +18,7 @@ $(document).ready(function() {
     getCoordinates($('#cities').val())
       .then(function(coordinates){
         this.weatherApp(coordinates.lat, coordinates.lon);
-        $('#city').html(city);
+        $('#city').html($('#cities').val());
       });
 
   });
