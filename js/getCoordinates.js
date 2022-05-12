@@ -17,6 +17,7 @@ async function getCoordinates(city) {
   })
   .catch(function (error) {
     $('.footerNotice').removeClass('d-none').html("Request failed: " + error);
+    return false;
   })
 }
 
